@@ -82,11 +82,11 @@ const Questlist = [
 
 function validate() {
 	
-	var errMsg = "";								/* stores the error message */
-	var result = true;								/* assumes no errors */
+	var errMsg = "";								
+	var result = true;								
 
 
-	return result;    //if false the information will not be sent to the server
+	return result;    
 }
 
 // get current JST in milliseconds
@@ -116,8 +116,7 @@ function calcFactor() {
 
 function init() {
 	
-	//var bookForm = document.getElementById("bookform");// link the variable to the HTML element
-	//bookForm.onsubmit = validate;          /* assigns functions to corresponding events */
+	
 
 	const factor = calcFactor();
 	for (let i = 0; i < 4; i++) {
