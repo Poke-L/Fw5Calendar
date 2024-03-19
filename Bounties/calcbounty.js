@@ -11,7 +11,8 @@ function validate() {
 function calcJST() {
 	let d = new Date();
 	let utc = d.getTime() + (d.getTimezoneOffset() * 60000);
-	return utc + (3600000 * 9);
+	const offset = +9;
+	return utc + (3600000 * offset);
 }
 
 function calcFactor() {
