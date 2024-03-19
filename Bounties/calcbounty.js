@@ -16,7 +16,7 @@ function calcJST() {
 }
 
 function calcFactor() {
-	let d = new Date("2024-03-18");
+	let d = new Date("2024-03-16");
 	let jst = calcJST();
 
 	let deltaTime = jst - d;
@@ -34,10 +34,10 @@ function calcFactor() {
 }
 
 function calcbounties(factor) {
-	const lowbounty = ["Red Khezu", "Gypceros", "Blangonga", "Shogun", "Pink Rathian", "Dyura", "Blue Kut-Ku", "Basarios", "Congalala", "Hypnoc", "Azure Rathalos", "Lavasioth", "Chameleos", "Black Diablos", "Kirin"];
-	const midbounty = ["Kushala", "Tigrex", "Black Diablos", "Akantor", "Nono", "Espinas", "Teostra", "Bright Hypnoc", "Red Khezu", "Dora", "Rajang", "Pink Rathian", "Blue Kut-Ku", "F. Espi", "Kamu", "Gravios"];
-	const highbounty = ["Khezu", "Congalala", "Kut-Ku", "Lavasioth", "Gravios", "Shogun", "Diablos", "Espinas", "Akantor", "Tigrex", "Basarios", "Rajang", "Hypnoc"];
-	const topbounty = [ "Dora", "Rusted Kush", "Kamu", "Kirin", "Guren", "Kushala", "Dyura", "Teostra"];
+	const lowbounty = ["Black Diablos", "Kirin", "Red Khezu", "Gypceros", "Blangonga", "Shogun", "Pink Rathian", "Dyura", "Blue Kut-Ku", "Basarios", "Congalala", "Hypnoc", "Azure Rathalos", "Lavasioth", "Chameleos"];
+	const midbounty = [ "Kamu", "Gravios", "Kushala", "Tigrex", "Black Diablos", "Akantor", "Nono", "Espinas", "Teostra", "Bright Hypnoc", "Red Khezu", "Dora", "Rajang", "Pink Rathian", "Blue Kut-Ku", "F. Espi"];
+	const highbounty = [ "Rajang", "Hypnoc", "Khezu", "Congalala", "Kut-Ku", "Lavasioth", "Gravios", "Shogun", "Diablos", "Espinas", "Akantor", "Tigrex", "Basarios"];
+	const topbounty = [  "Dyura", "Teostra", "Dora", "Rusted Kush", "Kamu", "Kirin", "Guren", "Kushala"];
 	let low = lowbounty[(factor%15)];
 	let mid = midbounty[(factor%16)];
 	let high = highbounty[(factor%13)];
