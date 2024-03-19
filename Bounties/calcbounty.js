@@ -51,8 +51,8 @@ function calcFactor() {
 function calcbounties(factor) {
 	const lowbounty = ["Black Diablos", "Kirin", "Red Khezu", "Gypceros", "Blangonga", "Shogun", "Pink Rathian", "Dyura", "Blue Kut-Ku", "Basarios", "Congalala", "Hypnoc", "Azure Rathalos", "Lavasioth", "Chameleos"];
 	const midbounty = [ "Kamu", "Gravios", "Kushala", "Tigrex", "Black Diablos", "Akantor", "Nono", "Espinas", "Teostra", "Bright Hypnoc", "Red Khezu", "Dora", "Rajang", "Pink Rathian", "Blue Kut-Ku", "F. Espi"];
-	const highbounty = [ "Rajang", "Hypnoc", "Khezu", "Congalala", "Kut-Ku", "Lavasioth", "Gravios", "Shogun", "Diablos", "Espinas", "Akantor", "Tigrex", "Basarios"];
-	const topbounty = [  "Dyura", "Teostra", "Dora", "Rusted Kush", "Kamu", "Kirin", "Guren", "Kushala"];
+	const highbounty = [ "Hypnoc", "Khezu", "Congalala", "Kut-Ku", "Lavasioth", "Gravios", "Shogun", "Diablos", "Espinas", "Akantor", "Tigrex", "Basarios", "Rajang"];
+	const topbounty = [ "Teostra", "Dora", "Rusted Kush", "Kamu", "Kirin", "Guren", "Kushala", "Dyura"];
 	let low = lowbounty[(factor%15)];
 	let mid = midbounty[(factor%16)];
 	let high = highbounty[(factor%13)];
