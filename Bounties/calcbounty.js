@@ -22,6 +22,7 @@ function calcFactor() {
 	let deltaDays = Math.round(deltaTime / (1000 * 3600 * 24));
 
 	let days = 0;
+	const jst = new Date(jst);
 	let hours = new Date(jst.getHours();
 	if (hours >= 12) {
 		days = deltaDays;
