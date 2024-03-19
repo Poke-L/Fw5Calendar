@@ -15,23 +15,38 @@ function calcJST() {
 }
 
 function calcFactor() {
-	let d = new Date("2024-03-16");
-	let jst = calcJST();
-
-	let deltaTime = jst - d;
-	let deltaDays = Math.round(deltaTime / (1000 * 3600 * 24));
-
-	let days = 0;
+	let d2 = new Date("2024-03-17");
+	const d = new Date();
+	const localTime = d.getTime();
+	const localOffset = d.getTimezoneOffset() * 60000;
+	const utc = localTime + localOffset;
+	const offset = +9;
+	const jst = utc + (3600000 * offset);
+	const jstTimeNow = new Date(jst).toLocaleString();
 	const jst2 = new Date(jst);
-	let hours = jst2.getHours();
-	if (hours >= 12) {
-		days = deltaDays;
-	} else  {
-		days = deltaDays - 1;
-	}
+	const hours = jst2.getHours();
+
+
+	const jstTimeNow2 = new Date(jst);
+
+	let Difference_In_Time = jst - d2;
+	let Difference_In_Days = Math.round(Difference_In_Time / (1000 * 3600 * 24));
+	
+	if (hours >= 12) { 
+	const days = Difference_In_Days;
 	let factor = days;
 	return factor;
+	}
+	else 
+	{
+	const days = Difference_In_Days - 1; 
+	let factor = days;
+	return factor;
+	}
 }
+
+
+
 
 function calcbounties(factor) {
 	const lowbounty = ["Black Diablos", "Kirin", "Red Khezu", "Gypceros", "Blangonga", "Shogun", "Pink Rathian", "Dyura", "Blue Kut-Ku", "Basarios", "Congalala", "Hypnoc", "Azure Rathalos", "Lavasioth", "Chameleos"];
