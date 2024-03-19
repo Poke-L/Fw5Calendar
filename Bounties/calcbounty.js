@@ -15,7 +15,7 @@ function calcJST() {
 }
 
 function calcFactor() {
-	let d = new Date("2024-03-16");
+	let d = new Date("2024-03-17");
 	let jst = calcJST();
 
 	let deltaTime = jst - d;
