@@ -24,7 +24,8 @@ function calcFactor() {
 	const jst = utc + (3600000 * offset);
 	const jstTimeNow = new Date(jst).toLocaleString();
 	const jst2 = new Date(jst);
-	const hours = jst2.getHours();
+	let hour = d.getUTCHours();
+	let hours = ((hour + 9)%24);
 
 
 	const jstTimeNow2 = new Date(jst);
