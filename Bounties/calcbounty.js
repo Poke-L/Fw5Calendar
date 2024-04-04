@@ -15,7 +15,7 @@ function calcJST() {
 }
 
 function calcFactor() {
-	let d = new Date("2024-03-17");
+let d = new Date("2024-03-18");
 	let jst = calcJST();
 
 	let deltaTime = jst - d;
@@ -30,7 +30,7 @@ function calcFactor() {
 	} else  {
 		days = deltaDays - 1;
 	}
-	let factor = hours;
+	let factor = days;
 	return factor;
 }
 
