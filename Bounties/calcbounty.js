@@ -15,35 +15,23 @@ function calcJST() {
 }
 
 function calcFactor() {
-	let d2 = new Date("2024-03-17");
-	const d = new Date();
-	const localTime = d.getTime();
-	const localOffset = d.getTimezoneOffset() * 60000;
-	const utc = localTime + localOffset;
-	const offset = +9;
-	const jst = utc + (3600000 * offset);
-	const jstTimeNow = new Date(jst).toLocaleString();
-	const jst2 = new Date(jst);
-	let hour = d.getUTCHours();
-	let hours = ((hour + 9)%24);
+	let d = new Date("2024-03-17");
+	let jst = calcJST();
 
+	let deltaTime = jst - d;
+	let deltaDays = Math.round(deltaTime / (1000 * 3600 * 24));
 
-	const jstTimeNow2 = new Date(jst);
-
-	let Difference_In_Time = jst - d2;
-	let Difference_In_Days = Math.round(Difference_In_Time / (1000 * 3600 * 24));
-	
-	if (hours >= 12) { 
-	const days = Difference_In_Days;
-	let factor = days;
-	return factor;
+	let days = 0;
+	let hour = new Date();
+	let h2 = hour.getUTCHours();
+	let hours = ((h2 + 9)%24)
+	if (hours >= 12) {
+		days = deltaDays;
+	} else  {
+		days = deltaDays - 1;
 	}
-	else 
-	{
-	const days = Difference_In_Days - 1; 
-	let factor = days;
+	let factor = hours;
 	return factor;
-	}
 }
 
 
