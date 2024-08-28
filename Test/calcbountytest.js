@@ -34,7 +34,7 @@ function calcFactor() {
 		days = deltaDays - 1;
 	}
 	let factor = days;
-	return deltaDays;
+	return days;
 }
 
 
