@@ -22,7 +22,7 @@ let d = new Date("2024-03-17");
 	let deltaDays = Math.round(deltaTime / (1000 * 3600 * 24));
 
 	let days = 0;
-	let hour = new Date.UTC();
+	let hour = new Date(hours);
 	let h2 = hour.getUTCHours();
 	let hours = ((h2 + 9)%24)
 	if (hours >= 12) {
