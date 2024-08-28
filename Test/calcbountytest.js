@@ -34,7 +34,7 @@ function calcFactor() {
 		days = deltaDays - 1;
 	}
 	let factor = days;
-	return factor;
+	return deltaDays;
 }
 
 
@@ -56,9 +56,9 @@ function calcbounties(factor) {
 function init() {
 
 	const factor = calcFactor();
-	const bounties = calcbounties(factor);
-	//document.getElementById("demo").innerHTML = factor
-	document.getElementById("demo").innerHTML = bounties[0]	
+	//const bounties = calcbounties(factor);
+	document.getElementById("demo").innerHTML = factor
+	//document.getElementById("demo").innerHTML = bounties[0]	
 	//document.getElementById("demo2").innerHTML = bounties[1]	
 	//document.getElementById("demo3").innerHTML = bounties[2]	
 	//document.getElementById("demo4").innerHTML = bounties[3]	
