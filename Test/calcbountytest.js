@@ -25,14 +25,14 @@ function calcFactor() {
 	let hour = new Date();
 	let h2 = hour.getUTCHours();
 	let hours = ((h2 + 9)%24)
-
+	let days = deltaDays;
 	
 
-	if (hours >= 12) {
-		days = deltaDays;
-	} else  {
-		days = deltaDays - 1;
-	}
+	//if (hours >= 12) {
+	//	days = deltaDays;
+	//} else  {
+	//	days = deltaDays - 1;
+	//}
 	let factor = days;
 	return days;
 }
