@@ -28,11 +28,11 @@ function calcFactor() {
 	let days = deltaDays;
 	
 
-	//if (hours >= 12) {
-	//	days = deltaDays;
-	//} else  {
-	//	days = deltaDays - 1;
-	//}
+	if (hours >= 12) {
+		days = deltaDays;
+	} else  {
+		days = deltaDays - 1;
+	}
 	let factor = days;
 	return days;
 }
